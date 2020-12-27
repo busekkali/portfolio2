@@ -1,0 +1,159 @@
+
+
+/*******************	GENERAL **************/
+* {
+	box-sizing: border-box;
+}
+html{
+	font-size: 62,5%;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6rem
+}
+
+a {
+	text-decoration: none;
+	font-size: 1.4rem;
+}
+.container
+{
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 0;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/*******************	HEADER **************/
+header {
+	background: #8cb6b8;
+	text-align: center;
+
+}
+header .logo-container {
+	padding: 20px;
+}
+header img {
+	width: 1200 px;
+	}
+
+	/*******************	MENU NAVIGAZIONE **************/
+
+nav {
+	background-color: #3f5f61;
+	padding: 10px;
+	}
+nav ul
+	{
+		margin:0;
+		padding: 0;
+		list-style-type: none
+	}
+nav li {
+	display: inline-block;
+}
+nav li a {
+	color: #fff;
+	display: inline-block;
+	padding: 10px 10px;
+	text-transform: uppercase;
+}
+
+/*******************	GALLERY **************/
+#gallery {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#gallery img {
+	width: 100%;
+}
+#gallery .item {
+	float: left;
+	width: 50%;
+	padding: 15px;
+	 }
+
+#gallery .caption {
+	background: #f0f0f0;
+	padding: 10px;
+}
+
+#gallery .caption p
+{
+	margin: 0;
+}
+
+#gallery .picture {
+	line-height: 0;
+}
+
+
+/******************* footer *************s*/
+footer.main {
+	text-align: center;
+	padding: 15px;
+  }
+footer.main img {
+	width: 50px;
+}
+
+footer.main.a{
+	display: inline-block;
+	padding: 5px 5px;
+}
+footer.main p {
+	font-size: 1.2rem
+}
+
+
+/*******************	gallery **************/
+
+@media only screen and (min-width: 768px) {
+#gallery .item {
+	width: 33%;
+		 }
+}
+
+@media only screen and (min-width: 992px) {
+
+nav li a {
+		transition: background .3s;
+	}
+nav li a:hover {
+		background: #83C750;
+		border-radius: 3px;
+	}
+#gallery .item {
+	transition: opacity .3s;
+}
+#gallery .item:hover {
+opacity: .7;
+	 }
+ 
+
+ }
+
+@media only screen and (max-width: 767px) {
+#gallery.item:nth-last-child(3n + 1){
+	clear: left;
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+#gallery.item:nth-last-child(2n + 1){
+	clear: left;
+	}
+ }
+
+
+
+
+
+
+
+
+
