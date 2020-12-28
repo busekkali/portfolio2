@@ -9,12 +9,13 @@ html{
 }
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.6rem
+	font-size: 1rem
 }
 
 a {
 	text-decoration: none;
 	font-size: 1.4rem;
+	color: #000;
 }
 .container
 {
@@ -28,9 +29,25 @@ a {
 	display: table;
 }
 
+.active {
+		background: #83C750;
+		border-radius: 3px;
+	}
+
+.title
+	{
+		font-size: 2.2rem;
+	}
+
+main {
+	min-height: calc(100vh - 311px - 144px);
+}
+
+
+
 /*******************	HEADER **************/
 header {
-	background: #8cb6b8;
+	background: #83C750;
 	text-align: center;
 
 }
@@ -38,7 +55,7 @@ header .logo-container {
 	padding: 20px;
 }
 header img {
-	width: 1200 px;
+	width: 120 px;
 	}
 
 	/*******************	MENU NAVIGAZIONE **************/
@@ -91,8 +108,14 @@ nav li a {
 	line-height: 0;
 }
 
+/******************* about **************/
 
-/******************* footer *************s*/
+#about img {
+border-radius: 100%;
+padding: 15px 0;
+}
+
+/******************* footer **************/
 footer.main {
 	text-align: center;
 	padding: 15px;
@@ -110,23 +133,82 @@ footer.main p {
 }
 
 
+@media only screen and (min-width: 768px) 
 /*******************	gallery **************/
-
-@media only screen and (min-width: 768px) {
+{
 #gallery .item {
 	width: 33%;
 		 }
 }
+
+#gallery.item:nth-last-child(3n + 1){
+	clear: left;
+}
+
+/*******************	about **************/
+#about p {
+	font-size: 1rem;
+}
+#about img {
+width: 70%;
+}
+
+#about .profile-pic {
+	float: left;
+	width: 50%;
+	padding: 15px;
+	text-align: center;
+}
+
+#about .description
+{
+	float: right;
+	width: 50%;
+	padding: 30px 15px 15px;
+}
+
+/******************* contatti **************/
+
+#contatti ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#contatti li {
+	padding: 1px 0;
+	font-size: 1rem;
+}
+
+#contatti .info {
+	float: left;
+	width: 70%;
+	padding: 15px;
+}
+#contatti .contatti
+{
+	float: right;
+	width: 30%;
+	padding: 15px;
+}
+
+#contatti .material-icons {
+	float: left;
+	display: inline-block;
+}
+
+#contatti .contatti a {
+	margin: 5px 0 0 5px;
+	display: inline-block;
+  font-size: 1rem;
+}
+
 
 @media only screen and (min-width: 992px) {
 
 nav li a {
 		transition: background .3s;
 	}
-nav li a:hover {
-		background: #83C750;
-		border-radius: 3px;
-	}
+
 #gallery .item {
 	transition: opacity .3s;
 }
@@ -134,14 +216,7 @@ nav li a:hover {
 opacity: .7;
 	 }
  
-
  }
-
-@media only screen and (max-width: 767px) {
-#gallery.item:nth-last-child(3n + 1){
-	clear: left;
-}
-
 @media only screen and (max-width: 767px) {
 	body {
 #gallery.item:nth-last-child(2n + 1){
